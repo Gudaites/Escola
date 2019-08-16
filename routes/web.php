@@ -32,4 +32,4 @@ Route::get('/turmas/editar/{id}', ['as' =>'site.turmas.editar','uses'=>'TurmaCon
 Route::put('/turmas/editar/atualizar/{id}', ['as' =>'site.turmas.atualizar','uses'=>'TurmaController@atualizar']);
 Route::get('/turmas/editar/deletar/{id}', ['as' =>'site.turmas.deletar','uses'=>'TurmaController@deletar']);
 
-Route::get('/turmas/alunos',['as'=>'site.turmas.alunos','uses'=>'AlunoTurmaController@index']);
+Route::get('/turmas/alunos/{id}',['as'=>'site.turmas.alunos','uses'=>'AlunoTurmaController@index']);

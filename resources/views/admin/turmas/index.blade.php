@@ -21,7 +21,7 @@
                     <td>{{ $registro->descricao }}</td>
                     <td>{{ $registro->qtd_vagas }}</td>
                     <td>{{ $registro->nome_professor }}</td>
-                    <td><a class="btn btn-info" href="{{route('site.turmas.alunos')}}">Alunos</a></td>
+                    <td><a class="btn btn-info" href="{{route('site.turmas.alunos',  $registro->id)}}">Alunos</a></td>
                     <td><a class="btn btn-primary" href="{{ route('site.turmas.editar', $registro->id)}}">Editar</a></td>
                     <td><a class="btn btn-danger" href="{{route('site.turmas.deletar', $registro->id)}}">Deletar</a></td>
                     </tr>
