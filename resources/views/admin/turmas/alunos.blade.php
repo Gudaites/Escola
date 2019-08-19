@@ -10,11 +10,7 @@
                         <th scope="col">Sexo</th>
                         <th scope="col">Data Nascimento</th>
                         <th scope="col">Cidade</th>
-                        <th scope="col">Bairro</th>
-                        <th scope="col">Rua</th>
-                        <th scope="col">Numero</th>
-                        <th scope="col">Complemento</th>
-                        <th scope="col"></th>
+                        <th scope="col">Retirar</th>
     
                     </tr>
                 </thead>
@@ -26,15 +22,14 @@
                         <td>{{ $registro->sexo }}</td>
                         <td>{{ $registro->data_nascimento}}</td>
                         <td>{{ $registro->cidade }}</td>
-                        <td>{{ $registro->bairro }}</td>
-                        <td>{{ $registro->rua }}</td>
-                        <td>{{ $registro->numero }}</td>
-                        <td>{{ $registro->complemento }}</td>
                         <td><a class="btn btn-danger" href="#">Retirar</a></td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <div class="col align-self-end">
+            <a class="btn btn-success btn-block" href="{{route('site.turmas.adicionaraluno', $turmaID)}}">Adicionar Aluno</a>
+            </div>
         <div class="col align-self-end">
         </div>
     </div>

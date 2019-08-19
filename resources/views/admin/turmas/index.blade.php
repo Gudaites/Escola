@@ -1,5 +1,5 @@
 @include('layout.header')
-<div class="container no-padding table-responsive-md" >
+<div class="container-fluid no-padding table-responsive-md" >
     <h3 align="center" style="margin-top:20px">Lista de Turmas</h3>
         <table class="table" >
             <thead>
@@ -29,7 +29,7 @@
             </tbody>
         </table>
     <div class="col align-self-end">
-        <a class="btn btn-danger" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
+        <a class="btn btn-success btn-block" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
     </div>
     <br><br><br>
 </div>
