@@ -2,7 +2,7 @@
 
 <div class="container-fluid no-padding table-responsive-md" >
     <h3 align="center" style="margin-top:20px">Lista de Alunos</h3>
-        <table class="table" >
+        <table id="example" class="table" >
             <thead>
                 <tr>
                     <th scope="col">Maticula</th>
@@ -14,8 +14,8 @@
                     <th scope="col">Rua</th>
                     <th scope="col">Numero</th>
                     <th scope="col">Complemento</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Deletar</th>
 
                 </tr>
             </thead>
@@ -25,7 +25,7 @@
                     <td>{{ $registro->id }}</td>
                     <td>{{ $registro->nome }}</td>
                     <td>{{ $registro->sexo }}</td>
-                    <td>{{ $registro->data_nascimento}}</td>
+                    <td>{{ \Carbon\Carbon::parse($registro->data_nascimento)->format('d/m/Y')}}</td>
                     <td>{{ $registro->cidade }}</td>
                     <td>{{ $registro->bairro }}</td>
                     <td>{{ $registro->rua }}</td>

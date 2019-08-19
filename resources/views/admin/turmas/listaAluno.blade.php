@@ -2,7 +2,7 @@
 
 <div class="container-fluid no-padding table-responsive-md" >
 <h3 align="center" style="margin-top:20px">Adicionar aluno na turma {{$turmaID}}</h3>
-        <table class="table" >
+        <table id="example" class="table" >
             <thead>
                 <tr>
                     <th scope="col">Maticula</th>
