@@ -2,7 +2,7 @@
 
 <div class="container-fluid no-padding table-responsive-md" >
         <h3 align="center" style="margin-top:20px">Lista de Alunos na Turma {{$turmaID}}</h3>
-            <table class="table" >
+            <table class="table" id="example" >
                 <thead>
                     <tr>
                         <th scope="col">Maticula</th>

@@ -1,7 +1,7 @@
 @include('layout.header')
 <div class="container-fluid no-padding table-responsive-md" >
     <h3 align="center" style="margin-top:20px">Lista de Turmas</h3>
-        <table class="table" id="examplesasa" >
+        <table class="table" id="example" >
             <thead>
                 <tr>
                     <th style="width:5%" scope="col">Numero</th>
