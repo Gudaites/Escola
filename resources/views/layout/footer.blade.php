@@ -17,7 +17,7 @@
     "sInfoFiltered": "(Filtrados de _MAX_ registros)",
     "sInfoPostFix": "",
     "sInfoThousands": ".",
-    "sLengthMenu": "_MENU_ resultados por página",
+    "sLengthMenu": "_MENU_ Resultados por Página",
     "sLoadingRecords": "Carregando...",
     "sProcessing": "Processando...",
     "sZeroRecords": "Nenhum registro encontrado",

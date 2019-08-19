@@ -37,3 +37,10 @@ Route::get('/turmas/retirarAluno/{id}/{turmaID}', ['as' =>'site.turmas.retiraral
 
 
 Route::get('/turmas/alunos/{id}',['as'=>'site.turmas.alunos','uses'=>'AlunoTurmaController@index']);
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
