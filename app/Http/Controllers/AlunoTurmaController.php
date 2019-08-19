@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\AlunoTurma;
 use App\Aluno;
 use App\Turma;
+use DB;
 
 class AlunoTurmaController extends Controller
 {
@@ -22,14 +23,14 @@ class AlunoTurmaController extends Controller
         return view('admin.turmas.alunos', compact('registros','turmaID'));
      }
 
-    public function deletar($id){
+/*     public function deletar($id){
         $req = AlunoTurma::where('turma_id', $id)->get();
         $registros = [];
         for ($i=0; $i < count($req); $i++) { 
             $registros[$i] = Aluno::where('id','=', $req[$i]->alunos_id)->first();
         
         } 
-    }
+    } */
 
     public function listaAluno($turmaID){
         $registros = Aluno::all();
@@ -42,6 +43,12 @@ class AlunoTurmaController extends Controller
         $dados->alunos_id = $id;
         $dados->turmas_id = $turmaID;
         $dados->save();
-        dd($dados);
+        //dd($dados);
+        return redirect()->route('site.turmas');
+    }
+
+    public function retiraAluno($id,$turmaID){
+        DB::table('aluno_turmas')->where('alunos_id','=', $id)->where('turmas_id','=', $turmaID)->delete();
+        return redirect()->route('site.turmas');
     }
 }

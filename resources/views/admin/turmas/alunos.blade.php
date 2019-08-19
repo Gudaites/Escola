@@ -22,7 +22,7 @@
                         <td>{{ $registro->sexo }}</td>
                         <td>{{ $registro->data_nascimento}}</td>
                         <td>{{ $registro->cidade }}</td>
-                        <td><a class="btn btn-danger" href="#">Retirar</a></td>
+                        <td><a class="btn btn-danger" href="{{route('site.turmas.retiraraluno', [$registro->id, $turmaID])}}">Retirar</a></td>
                         </tr>
                     @endforeach
                 </tbody>

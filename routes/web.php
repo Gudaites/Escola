@@ -33,6 +33,7 @@ Route::put('/turmas/editar/atualizar/{id}', ['as' =>'site.turmas.atualizar','use
 Route::get('/turmas/editar/deletar/{id}', ['as' =>'site.turmas.deletar','uses'=>'TurmaController@deletar']);
 Route::get('/turmas/listaAluno/{id}', ['as' =>'site.turmas.listaaluno','uses'=>'AlunoTurmaController@listaAluno']);
 Route::get('/turmas/salvaAluno/{id}/{turmaID}', ['as' =>'site.turmas.salvaaluno','uses'=>'AlunoTurmaController@salvaAluno']);
+Route::get('/turmas/retirarAluno/{id}/{turmaID}', ['as' =>'site.turmas.retiraraluno','uses'=>'AlunoTurmaController@retiraAluno']);
 
 
 Route::get('/turmas/alunos/{id}',['as'=>'site.turmas.alunos','uses'=>'AlunoTurmaController@index']);
