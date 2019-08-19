@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\AlunoTurma;
 use App\Aluno;
+use App\Turma;
 
 class AlunoTurmaController extends Controller
 {
@@ -30,8 +31,17 @@ class AlunoTurmaController extends Controller
         } 
     }
 
-    public function adicionarAluno($turmaID){
-        return view('site.turmas.adicionaraluno', $turmaID, compact('turmaID'));
+    public function listaAluno($turmaID){
+        $registros = Aluno::all();
+        return view('admin.turmas.listaAluno', compact('registros', 'turmaID'));
         
+    }
+
+    public function salvaAluno($id,$turmaID){
+        $dados = new AlunoTurma();
+        $dados->alunos_id = $id;
+        $dados->turmas_id = $turmaID;
+        $dados->save();
+        dd($dados);
     }
 }

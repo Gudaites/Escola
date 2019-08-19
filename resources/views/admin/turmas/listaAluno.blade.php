@@ -1,7 +1,7 @@
 @include('layout.header')
 
 <div class="container-fluid no-padding table-responsive-md" >
-    <h3 align="center" style="margin-top:20px">Lista de Alunos</h3>
+<h3 align="center" style="margin-top:20px">Adicionar aluno na turma {{$turmaID}}</h3>
         <table class="table" >
             <thead>
                 <tr>
@@ -14,7 +14,6 @@
                     <th scope="col">Rua</th>
                     <th scope="col">Numero</th>
                     <th scope="col">Complemento</th>
-                    <th scope="col"></th>
                     <th scope="col"></th>
 
                 </tr>
@@ -31,15 +30,11 @@
                     <td>{{ $registro->rua }}</td>
                     <td>{{ $registro->numero }}</td>
                     <td>{{ $registro->complemento }}</td>
-                    <td><a class="btn btn-primary" href="#">Editar</a></td>
-                    <td><a class="btn btn-danger" href="#">Deletar</a></td>
+                    <td><a class="btn btn-primary" href="{{ route('site.turmas.salvaaluno', [$registro->id, $turmaID])}}">Adicionar</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-    <div class="col align-self-end">
-        <a class="btn btn-success btn-block" href="#">Adicionar</a>
-    </div>
 </div>
 
 @include('layout.footer')
