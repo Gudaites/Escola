@@ -1,8 +1,7 @@
 @include('layout.header')
-
 <div class="container-fluid no-padding table-responsive-md" >
     <h3 align="center" style="margin-top:20px">Lista de Alunos</h3>
-        <table id="example" class="table" >
+        <table class="table" id="example" >
             <thead>
                 <tr>
                     <th scope="col">Maticula</th>

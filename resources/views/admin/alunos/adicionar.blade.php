@@ -4,11 +4,12 @@
     <div class=" center">
     <form action="{{ route('site.alunos.salvar')}}" class="" method="post" enctype="multipart/form-data">
         @csrf
-@include('admin.alunos._form')
+    @include('admin.alunos._form')
 <button class="btn btn-success btn-block"> Salvar</button>
 </form>
 <br><br>
 </div>
 </div>
 
-@include('layout.footer')
+
+    @include('layout.footer')

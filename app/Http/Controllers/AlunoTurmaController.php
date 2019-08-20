@@ -23,15 +23,6 @@ class AlunoTurmaController extends Controller
         return view('admin.turmas.alunos', compact('registros','turmaID'));
      }
 
-/*     public function deletar($id){
-        $req = AlunoTurma::where('turma_id', $id)->get();
-        $registros = [];
-        for ($i=0; $i < count($req); $i++) { 
-            $registros[$i] = Aluno::where('id','=', $req[$i]->alunos_id)->first();
-        
-        } 
-    } */
-
     public function listaAluno($turmaID){
         $registros = Aluno::all();
         return view('admin.turmas.listaAluno', compact('registros', 'turmaID'));
@@ -39,6 +30,7 @@ class AlunoTurmaController extends Controller
     }
 
     public function salvaAluno($id,$turmaID){
+
         $dados = new AlunoTurma();
         $dados->alunos_id = $id;
         $dados->turmas_id = $turmaID;

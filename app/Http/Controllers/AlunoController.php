@@ -17,8 +17,24 @@ class AlunoController extends Controller
      }
 
      public function salvar(Request $req){
-         $dados = $req->all();
-         //dd($dados);
+
+        $regras = [
+            'nome' => 'required|min:5|max:120',
+            'data_nascimento' => 'required|date',
+            'sexo' => 'required'
+        ];
+        $mensagens = [
+            'nome.required' => 'O nome é requerido',
+            'nome.min' => 'É necessario no minimo 5 letras',
+            'nome.max' => 'É necessario no maximo 120 letras',
+            'nome.alpha' => 'Apenas letras alfabeticas',
+            'data_nascimento.required' => 'O campo data é necessario',
+            'sexo.required' => 'O campo data é necessario'
+        ];
+
+        $req->validate($regras,$mensagens);
+
+        $dados = $req->all();
          Aluno::create($dados);
          return redirect()->route('site.alunos.adicionar');
      }
@@ -29,6 +45,21 @@ class AlunoController extends Controller
     }
 
     public function atualizar(Request $req,$id){
+        $regras = [
+            'nome' => 'required|min:5|max:120',
+            'data_nascimento' => 'required|date',
+            'sexo' => 'required'
+        ];
+        $mensagens = [
+            'nome.required' => 'O nome é requerido',
+            'nome.min' => 'É necessario no minimo 5 letras',
+            'nome.max' => 'É necessario no maximo 120 letras',
+            'nome.alpha' => 'Apenas letras alfabeticas',
+            'data_nascimento.required' => 'O campo data é necessario',
+            'sexo.required' => 'O campo data é necessario',
+        ];
+        $req->validate($regras,$mensagens);
+
         $dados = $req->all();
         Aluno::find($id)->update($dados);
 
