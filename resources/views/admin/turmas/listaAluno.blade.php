@@ -1,5 +1,12 @@
 @include('layout.header')
-
+@if($errors->any())
+<div class="alert alert-warning alert-dismissible fade show" role="alert" align="center">
+        {{$errors->first()}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+</div>
+@endif
 <div class="container-fluid no-padding table-responsive-md" >
 <h3 align="center" style="margin-top:20px">Adicionar aluno na turma {{$turmaID}}</h3>
         <table id="example" class="table" >

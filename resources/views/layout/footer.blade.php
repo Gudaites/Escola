@@ -1,7 +1,6 @@
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-    </div>
+  <div class="footer-copyright text-right py-3" style="margin-right:20px">© {{date('Y')}}
+</div>
     <!-- Copyright -->
   
   </footer>

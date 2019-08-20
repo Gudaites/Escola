@@ -7,6 +7,7 @@ use App\AlunoTurma;
 use App\Aluno;
 use App\Turma;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class AlunoTurmaController extends Controller
 {
@@ -30,13 +31,17 @@ class AlunoTurmaController extends Controller
     }
 
     public function salvaAluno($id,$turmaID){
+        $teste = AlunoTurma::where('alunos_id',$id)->where('turmas_id', $turmaID)->first();
+        if(!(isset($teste))){
+            $dados = new AlunoTurma();
+            $dados->alunos_id = $id;
+            $dados->turmas_id = $turmaID;
+            $dados->save();
+            //dd($dados);
+            return redirect()->route('site.turmas');
+        }
 
-        $dados = new AlunoTurma();
-        $dados->alunos_id = $id;
-        $dados->turmas_id = $turmaID;
-        $dados->save();
-        //dd($dados);
-        return redirect()->route('site.turmas');
+        return Redirect::back()->withErrors(['Usuario já cadastrado', 'The Message']);
     }
 
     public function retiraAluno($id,$turmaID){

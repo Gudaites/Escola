@@ -28,9 +28,8 @@
                 @endforeach
             </tbody>
         </table>
-    <div class="col align-self-end">
-        <a class="btn btn-success btn-block" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
+    <div class="col align-self-end" >
+        <a class="btn btn-success btn-block" style="margin-top:10px" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
     </div>
-    <br><br><br>
 </div>
 @include('layout.footer')
