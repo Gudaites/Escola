@@ -72,7 +72,7 @@ class AlunoController extends Controller
 
     public function deletar($id){
         Aluno::find($id)->delete();
-        return redirect()->route('site.alunos');
+        return redirect()->route('site.alunos')->withErrors(['Aluno deletado com sucesso!', 'The Message']);
     }
 
 }

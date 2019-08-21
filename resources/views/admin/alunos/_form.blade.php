@@ -51,7 +51,7 @@
         </div>
         <div class="form-group col-md-4">
             <label for="numero">Numero</label>
-            <input type="number" class="form-control" value="{{isset($registro->numero) ? $registro->numero : ''}}" name="Numero" id="Numero" placeholder="Numero">
+            <input type="number" class="form-control" value="{{isset($registro->numero) ? $registro->numero : ''}}" name="numero" id="numero" placeholder="Numero">
         </div>
         <div class="form-group col-md-4">
             <label for="complemento">Complemento</label>
