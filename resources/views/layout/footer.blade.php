@@ -1,9 +1,11 @@
+<footer class="page-footer font-small blue">
+  
   <!-- Copyright -->
   <div class="footer-copyright text-right py-3" style="margin-right:20px">© {{date('Y')}}
 </div>
     <!-- Copyright -->
   
-  </footer>
+  </footer >
   <!-- Footer -->
   <script>
     $(document).ready( function () {

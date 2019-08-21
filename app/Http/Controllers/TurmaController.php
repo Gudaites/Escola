@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Turma;
+use Illuminate\Support\Facades\Redirect;
 
 class TurmaController extends Controller
 {
@@ -54,6 +55,7 @@ class TurmaController extends Controller
 
     public function deletar($id){
         Turma::find($id)->delete();
-        return redirect()->route('site.turmas');
+        //return Redirect::back()->withErrors(['Limite ultrapassado', 'The Message']);
+        return redirect()->route('site.turmas')->withErrors(['Turma Deletada', 'The Message']);
     }
 }

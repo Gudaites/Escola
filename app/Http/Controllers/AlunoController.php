@@ -7,6 +7,10 @@ use App\Aluno;
 
 class AlunoController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index(){
        $registros = Aluno::all();
     return view('admin.alunos.index', compact('registros'));
@@ -29,7 +33,7 @@ class AlunoController extends Controller
             'nome.max' => 'É necessario no maximo 120 letras',
             'nome.alpha' => 'Apenas letras alfabeticas',
             'data_nascimento.required' => 'O campo data é necessario',
-            'sexo.required' => 'O campo data é necessario'
+            'sexo.required' => 'O campo sexo é necessario'
         ];
 
         $req->validate($regras,$mensagens);
