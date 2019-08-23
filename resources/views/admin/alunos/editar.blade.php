@@ -6,7 +6,7 @@
         @csrf
         <input type="hidden" name="_method" value="put">
         @include('admin.alunos._form')
-        <button class="btn btn-success btn-block">Atualizar</button>
+        <button class="btn btn-success btn-block" style="margin-bottom:30px">Atualizar</button>
     </form>
     </div>
 </div>

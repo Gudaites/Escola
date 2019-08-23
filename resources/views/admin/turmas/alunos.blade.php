@@ -1,5 +1,5 @@
 @include('layout.header')
-
+@include('admin.mensagens')
 <div class="container-fluid no-padding table-responsive-md" >
         <h3 align="center" style="margin-top:20px">Lista de Alunos na Turma {{$turmaID}}</h3>
             <table class="table" id="example" >
@@ -28,7 +28,7 @@
                 </tbody>
             </table>
             <div class="col align-self-end">
-            <a class="btn btn-success btn-block" href="{{route('site.turmas.listaaluno', $turmaID)}}">Adicionar Aluno</a>
+            <a class="btn btn-success btn-block" style="margin-bottom:10px" href="{{route('site.turmas.listaaluno', $turmaID)}}">Adicionar Aluno</a>
             </div>
         <div class="col align-self-end">
         </div>

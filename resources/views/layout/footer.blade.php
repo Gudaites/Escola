@@ -1,12 +1,4 @@
-<footer class="page-footer font-small blue" style="margin-top:30px">
-  
-  <!-- Copyright -->
-  <div class="footer-copyright text-right py-3" style="margin-right:30px">© {{date('Y')}}
-</div>
-    <!-- Copyright -->
-  
-  </footer >
-  <!-- Footer -->
+
   <script>
     $(document).ready( function () {
       $.noConflict();
@@ -39,6 +31,8 @@
         "bInfo" : false
       });
     } );
+
+    
   </script>
 </body>
 </html>

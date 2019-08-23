@@ -38,23 +38,23 @@ class AlunoTurmaController extends Controller
         //dd($limite->qtd_vagas);
         $limite3 = AlunoTurma::where('turmas_id',$turmaID)->count('turmas_id');
         //dd($limite3);
-        if(!($limite3 >= $vagas)){
-            if(!(isset($teste))){
+        if(!(isset($teste))){
+            if(!($limite3 >= $vagas)){
                 $dados = new AlunoTurma();
                 $dados->alunos_id = $id;
                 $dados->turmas_id = $turmaID;
                 $dados->save();
                 //dd($dados);
-                return redirect()->route('site.turmas');
+                return redirect()->route('site.turmas')->with('success','Aluno(a) adicionado na turma com sucesso!');
         }else{
-            return Redirect::back()->withErrors(['Usuario já cadastrado', 'The Message']);
+            return Redirect::back()->withErrors(['Limite ultrapassado', 'The Message']);
         }  
     }
-        return Redirect::back()->withErrors(['Limite ultrapassado', 'The Message']);
+        return Redirect::back()->withErrors(['Usuario ja cadastrado', 'The Message']);
 }
 
     public function retiraAluno($id,$turmaID){
         DB::table('aluno_turmas')->where('alunos_id','=', $id)->where('turmas_id','=', $turmaID)->delete();
-        return redirect()->route('site.turmas')->withErrors(['Aluno retirado com sucesso!', 'The Message']);
+        return redirect()->route('site.turmas')->withErrors(['Aluno(a) retirado com sucesso!', 'The Message']);
     }
 }

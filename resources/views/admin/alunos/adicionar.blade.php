@@ -5,9 +5,8 @@
     <form action="{{ route('site.alunos.salvar')}}" class="" method="post" enctype="multipart/form-data">
         @csrf
     @include('admin.alunos._form')
-<button class="btn btn-success btn-block"> Salvar</button>
+<button class="btn btn-success btn-block" style="margin-bottom:30px"> Salvar</button>
 </form>
-<br><br>
 </div>
 </div>
 

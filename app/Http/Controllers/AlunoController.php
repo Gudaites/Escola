@@ -40,7 +40,7 @@ class AlunoController extends Controller
 
         $dados = $req->all();
          Aluno::create($dados);
-         return redirect()->route('site.alunos.adicionar');
+         return redirect()->route('site.alunos')->with('success','Aluno Cadastrado com sucesso!');
      }
 
      public function editar($id){
@@ -67,7 +67,7 @@ class AlunoController extends Controller
         $dados = $req->all();
         Aluno::find($id)->update($dados);
 
-        return redirect()->route('site.alunos');
+        return redirect()->route('site.alunos')->with('success','Aluno editado com sucesso!');
     }
 
     public function deletar($id){

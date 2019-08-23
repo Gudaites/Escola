@@ -6,7 +6,7 @@
         @csrf
         <input type="hidden" name="_method" value="put">
         @include('admin.turmas._form')
-        <button class="btn btn-success btn-block">Atualizar</button>
+        <button class="btn btn-success btn-block" style="margin-bottom:10px">Atualizar</button>
     </form>
     <br><br><br>
     </div>

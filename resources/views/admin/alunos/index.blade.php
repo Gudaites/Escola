@@ -38,7 +38,7 @@
             </tbody>
         </table>
     <div class="col align-self-end">
-        <a class="btn btn-success btn-block" style="margin-top:10px" href="{{ route('site.alunos.adicionar')}}">Adicionar</a>
+        <a class="btn btn-success btn-block" style="margin-bottom:30px"  href="{{ route('site.alunos.adicionar')}}">Adicionar</a>
     </div>
 </div>
 

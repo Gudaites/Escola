@@ -30,7 +30,8 @@
             </tbody>
         </table>
     <div class="col align-self-end" >
-        <a class="btn btn-success btn-block" style="margin-top:10px" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
+        <a class="btn btn-success btn-block" style="margin-top:10px margin-bottom:10px" href="{{ route('site.turmas.adicionar')}}">Adicionar</a>
     </div>
 </div>
+
 @include('layout.footer')

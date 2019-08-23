@@ -16,14 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
   .jumbotron {
     padding-top: 1%;
     padding-bottom: 0%;
-    background-color: #ffffff;
+    background-color: #dddddd;
   }
   .display-3 {
     font-size: 2.5rem;
@@ -34,14 +30,6 @@
   </style>
 </head>
 <body>
-
-<div class="jumbotron jumbotron-fluid text-center mb-0" style="margin-bottom:0">
-    <div class="container padding-top: 60px">
-      <h1 class="display-3 ">Gestão Escolar</h1>
-      <p>São Leopoldo<p>
-    </div>
-</div>
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="/">Página Inicial</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

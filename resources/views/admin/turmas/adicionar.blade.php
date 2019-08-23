@@ -5,7 +5,7 @@
     <form action="{{ route('site.turmas.salvar')}}" class="" method="post" enctype="multipart/form-data">
         @csrf
 @include('admin.turmas._form')
-<button class="btn btn-success btn-block"> Salvar</button>
+<button class="btn btn-success btn-block" style="margin-bottom:10px"> Salvar</button>
 </form>
 <br><br>
 </div>
