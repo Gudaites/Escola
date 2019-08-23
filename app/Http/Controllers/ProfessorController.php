@@ -11,4 +11,9 @@ class ProfessorController extends Controller
         $registros = Professor::all();
         return view('admin.professores.index', compact('registros'));
      }
+
+     public function adicionar(){
+        return view('admin.professores.adicionar');
+    }
+    
 }

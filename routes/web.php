@@ -26,7 +26,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     Route::get('professores',['as'=>'site.professores','uses'=>'ProfessorController@index']);
+    Route::get('/professores/adicionar',['as'=>'site.professores.adicionar','uses'=>'ProfessorController@adicionar']);
+    Route::post('/professores/salvar',['as'=>'site.professores.salvar','uses'=>'ProfessorController@salvar']);
 
+
+    
     Route::get('/turmas',['as'=>'site.turmas','uses'=>'TurmaController@index']);
     Route::get('/turmas/adicionar',['as'=>'site.turmas.adicionar','uses'=>'TurmaController@adicionar']);
     Route::post('/turmas/salvar',['as'=>'site.turmas.salvar','uses'=>'TurmaController@salvar']);
