@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/alunos/editar/deletar/{id}', ['as' =>'site.alunos.deletar','uses'=>'AlunoController@deletar']);
 
 
-
+    Route::get('professores',['as'=>'site.professores','uses'=>'ProfessorController@index']);
 
     Route::get('/turmas',['as'=>'site.turmas','uses'=>'TurmaController@index']);
     Route::get('/turmas/adicionar',['as'=>'site.turmas.adicionar','uses'=>'TurmaController@adicionar']);
